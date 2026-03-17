@@ -1,6 +1,6 @@
 # Hexaware_AutomationFW
 
-E2E test suite for Google using Playwright + TypeScript.
+E2E test suite using Playwright + TypeScript.
 
 ## Setup
 
@@ -29,10 +29,10 @@ npm run type-check        # TypeScript type checking
 
 ## CI Workflows
 
-| Workflow | Trigger | Steps |
-|---|---|---|
-| **PR Validation** | PR opened → `testing` | Lint → Unit tests → E2E tests |
-| **Post-Merge** | PR merged → `testing` | Bump patch version → Delete source branch |
+| Workflow          | Trigger               | Steps                                     |
+| ----------------- | --------------------- | ----------------------------------------- |
+| **PR Validation** | PR opened → `testing` | Lint → Unit tests → E2E tests             |
+| **Post-Merge**    | PR merged → `testing` | Bump patch version → Delete source branch |
 
 ## Project structure
 

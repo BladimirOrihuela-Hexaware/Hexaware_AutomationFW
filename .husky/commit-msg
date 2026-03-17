@@ -20,7 +20,7 @@ if ! echo "$COMMIT_MSG" | grep -qE "$PATTERN"; then
   echo "  ✖ Invalid commit message format."
   echo ""
   echo "  Expected: <type>(<scope>): <description>"
-  echo "  Example:  feat(tests): add google search test"
+  echo "  Example:  feat(tests): add page search test"
   echo ""
   echo "  Allowed types: build | chore | ci | docs | feat | fix | perf | refactor | revert | style | test"
   echo ""
