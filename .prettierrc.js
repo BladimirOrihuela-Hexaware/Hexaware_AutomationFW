@@ -8,7 +8,7 @@ module.exports = {
   semi: true, // Always add semicolons
 
   // ── Trailing commas ──────────────────────────────────────────────────────
-  trailingComma: "all", // Trailing commas wherever valid (ES5+)
+  trailingComma: 'all', // Trailing commas wherever valid (ES5+)
 
   // ── Line length ──────────────────────────────────────────────────────────
   printWidth: 100, // Wrap lines at 100 chars
@@ -20,8 +20,8 @@ module.exports = {
   // ── Brackets ─────────────────────────────────────────────────────────────
   bracketSpacing: true, // { foo: bar } with spaces
   bracketSameLine: false, // JSX closing > on new line
-  arrowParens: "always", // Always (x) => x, never x => x
+  arrowParens: 'always', // Always (x) => x, never x => x
 
   // ── End of line ──────────────────────────────────────────────────────────
-  endOfLine: "lf", // Unix line endings (important for CI/Git)
+  endOfLine: 'lf', // Unix line endings (important for CI/Git)
 };
