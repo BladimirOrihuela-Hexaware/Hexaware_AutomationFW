@@ -30,7 +30,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
           cache: 'npm'
 
       - name: Configure git identity
@@ -48,7 +48,7 @@ jobs:
       - name: Commit and push version bump
         run: |
           git add package.json package-lock.json
-          git commit -m "chore: bump version to ${{ steps.bump.outputs.new_version }} [skip ci]"
+          git commit -m "chore(ci): bump version to ${{ steps.bump.outputs.new_version }} [skip ci]"
           git push origin testing
 
       # ── Delete the source branch that opened the PR ──────────────────────
