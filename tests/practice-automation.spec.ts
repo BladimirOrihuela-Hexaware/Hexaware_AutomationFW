@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 test.describe('Practice Automation', () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto('/practice-test-login');
+    await page.goto('practice-test-login');
     await page.waitForLoadState('domcontentloaded');
   });
 

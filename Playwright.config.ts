@@ -13,7 +13,7 @@ export default defineConfig({
     ['junit', { outputFile: 'test-results/results.xml' }],
   ],
   use: {
-    baseURL: 'https://practicetestautomation.com',
+    baseURL: 'https://practicetestautomation.com/',
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
     video: 'on-first-retry',
