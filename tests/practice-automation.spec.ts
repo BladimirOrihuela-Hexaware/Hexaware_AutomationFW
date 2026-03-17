@@ -15,18 +15,17 @@ test.describe('Practice Automation', () => {
   });
   test('should login', async ({ page }) => {
     const textbox = 'textbox';
+    const expected = 'Logged In Successfully';
     const username = page.getByRole(textbox, { name: 'Username' });
     const password = page.getByRole(textbox, { name: 'Password' });
     await username.fill('student');
     await password.fill('Password123');
     await page.getByRole('button', { name: 'Submit' }).click();
-    const successMessage = page.getByRole('heading', {
-      name: 'Logged In Successfully',
-    });
+    const successMessage = page.getByRole('heading', { name: expected });
     await page.screenshot({
       path: 'test-results/login_validation.png',
       fullPage: true,
     });
-    await expect(successMessage).toHaveText('Logged In Successfully');
+    await expect(successMessage).toHaveText(expected);
   });
 });
