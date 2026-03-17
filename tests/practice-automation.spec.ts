@@ -1,33 +1,32 @@
-import { test, expect } from "@playwright/test";
+import { test, expect } from '@playwright/test';
 
-test.describe("Practice Automation", () => {
+test.describe('Practice Automation', () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto("/practice-test-login");
-    await page.waitForLoadState("domcontentloaded");
+    await page.goto('/practice-test-login');
+    await page.waitForLoadState('domcontentloaded');
   });
 
-  test("should display the correct page title on the home page", async ({
-    page,
-  }) => {
+  test('should display the correct page title on the home page', async ({ page }) => {
     await page.screenshot({
-      path: "test-results/title_validation.png",
+      path: 'test-results/title_validation.png',
       fullPage: true,
     });
-    await expect(page).toHaveTitle("Test Login | Practice Test Automation");
+    await expect(page).toHaveTitle('Test Login | Practice Test Automation');
   });
-  test("should login", async ({ page }) => {
-    const username = page.getByRole("textbox", { name: "Username" });
-    const password = page.getByRole("textbox", { name: "Password" });
-    await username.fill("student");
-    await password.fill("Password123");
-    await page.getByRole("button", { name: "Submit" }).click();
-    const successMessage = page.getByRole("heading", {
-      name: "Logged In Successfully",
+  test('should login', async ({ page }) => {
+    const textbox = 'textbox';
+    const username = page.getByRole(textbox, { name: 'Username' });
+    const password = page.getByRole(textbox, { name: 'Password' });
+    await username.fill('student');
+    await password.fill('Password123');
+    await page.getByRole('button', { name: 'Submit' }).click();
+    const successMessage = page.getByRole('heading', {
+      name: 'Logged In Successfully',
     });
     await page.screenshot({
-      path: "test-results/login_validation.png",
+      path: 'test-results/login_validation.png',
       fullPage: true,
     });
-    await expect(successMessage).toHaveText("Logged In Successfully");
+    await expect(successMessage).toHaveText('Logged In Successfully');
   });
 });
