@@ -5,3 +5,4 @@ test-results/
 *.xml
 .env
 .env.*
+package-lock.json
